@@ -1,0 +1,38 @@
+Exercício 1: Variáveis Primitivas
+Crie um programa que declare variáveis para armazenar um número inteiro, um número de ponto flutuante e uma string. Atribua valores a essas variáveis e exiba-as na tela.
+
+
+Exercício 2: Estruturas Condicionais
+Escreva um programa que leia um número e determine se ele é par ou ímpar. Imprima o resultado na tela.
+
+
+Exercício 3: Laços (for/while)
+Crie um programa que imprima os números de 1 a 10 usando um loop.
+
+
+Exercício 4: Listas (ArrayList)
+Implemente um programa que permita ao usuário adicionar e remover elementos de uma lista dinâmica (por exemplo, ArrayList) de números inteiros.
+
+
+Exercício 5: Matrizes (Arrays)
+Crie uma matriz (array) de números inteiros. Encontre e imprima o maior valor na matriz.
+
+
+Exercício 6: Estruturas Condicionais e Laços
+Escreva um programa que encontre todos os números primos entre 1 e 100 e imprima-os na tela.
+
+
+Exercício 7: Listas e Matrizes
+Implemente um jogo da velha (Tic-Tac-Toe) usando uma matriz para representar o tabuleiro. Permita que dois jogadores façam jogadas alternadas.
+
+
+Exercício 8: Estruturas Condicionais e Listas
+Crie um programa que solicite ao usuário que insira uma lista de números inteiros e, em seguida, encontre e exiba o número que mais se repete.
+
+
+Exercício 9: Programação Orientada a Objetos
+Crie uma classe Pessoa com atributos como nome, idade e endereço. Implemente um programa que permite ao usuário criar e gerenciar uma lista de pessoas.
+
+
+Exercício 10: Desafio Final
+Implemente um sistema de gerenciamento de estoque para uma loja, permitindo ao usuário adicionar, remover e atualizar itens no estoque. Utilize classes, listas e estruturas condicionais.
