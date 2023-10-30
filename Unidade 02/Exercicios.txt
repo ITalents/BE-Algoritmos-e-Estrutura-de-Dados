@@ -1,0 +1,43 @@
+Listas (ArrayList):
+1 - Inversão de Lista:
+Escreva um programa para inverter os elementos de um ArrayList sem usar métodos prontos do java.
+
+2 - Remoção de Elementos Duplicados:
+Crie um método para remover elementos duplicados de um ArrayList.
+
+3 - Mesclar Listas:
+Implemente uma função que receba duas ArrayLists e retorne uma nova lista que contenha todos os elementos das listas originais intercalados.
+
+
+
+Pilhas:
+4 - Verificação de Expressões:
+Utilizando pilhas, desenvolva um programa para verificar se uma expressão matemática contendo parênteses está balanceada.
+
+5 - Inversão com Pilha:
+Implemente um método para inverter a ordem dos elementos em um ArrayList utilizando uma pilha.
+
+
+
+Filas:
+6 - Implementação de um Sistema de Fila de Espera:
+Crie um sistema simples de fila de espera com funcionalidades de adicionar, remover e exibir elementos.
+
+7 - Ordem de Chegada:
+Crie um programa para simular a ordem de chegada de elementos em uma fila e exiba a ordem de saída.
+
+
+
+Maps (HashMap):
+8 - Contagem de Palavras:
+Escreva um programa que conte a frequência das palavras em uma frase utilizando um HashMap.
+
+9 - Mesclar Mapas:
+Implemente um método para mesclar dois HashMaps e manipular possíveis conflitos de chaves.
+
+
+
+
+Algoritmos de Ordenação:
+10 - Implementação de Algoritmo de Ordenação:
+Escolha um algoritmo de ordenação (ex: Bubble Sort, Quick Sort, Merge Sort) e implemente-o para ordenar um ArrayList de números inteiros de forma decrescente.
