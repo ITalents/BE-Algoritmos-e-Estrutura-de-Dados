@@ -1,10 +1,12 @@
 public class ExemploArvoreBinaria {
     Node root;
 
+    //definindo a raiz da arvore
     public ExemploArvoreBinaria(){
         root = null;
     }
     
+    //class que define os nós
     static class Node {
         String nome;
         Node left, right;
@@ -16,8 +18,10 @@ public class ExemploArvoreBinaria {
         }
     }
     public static void main(String[] args) {
+        //criando a arvore
         ExemploArvoreBinaria arvore = new ExemploArvoreBinaria();
 
+        //adicionando elementos a arvore
         arvore.root = new Node("AAA");
         arvore.root.right = new Node("BBB"); 
         arvore.root.left = new Node("CCC");
@@ -28,6 +32,7 @@ public class ExemploArvoreBinaria {
         arvore.root.left.right = new Node("FFF");
         arvore.root.left.left = new Node("GGG");
 
+        //exibindo os elementos da arvore
         System.out.println(arvore.root.nome);
         System.out.println(arvore.root.right.nome);
         System.out.println(arvore.root.left.nome);
