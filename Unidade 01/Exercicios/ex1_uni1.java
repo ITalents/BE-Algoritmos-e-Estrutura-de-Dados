@@ -1,4 +1,4 @@
-public class ex1 {
+public class ex1_uni1 {
     public static void main(String[] args) {
         // Declarando e atribuindo valores às variáveis
         int numeroInteiro = 10;

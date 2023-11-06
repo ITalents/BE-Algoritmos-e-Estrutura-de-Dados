@@ -1,4 +1,4 @@
-public class ex5 {
+public class ex5_uni1 {
     public static void main(String[] args) {
         // Criando a matriz de números inteiros
         int[][] matriz = {

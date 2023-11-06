@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ex4 {
+public class ex4_uni1 {
     public static void main(String[] args) {
         ArrayList<Integer> listaNumeros = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);

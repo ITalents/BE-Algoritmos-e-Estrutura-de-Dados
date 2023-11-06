@@ -22,7 +22,7 @@ class ItemEstoque {
     }
 }
 
-public class ex10 {
+public class ex10_uni1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<ItemEstoque> estoque = new ArrayList<>();

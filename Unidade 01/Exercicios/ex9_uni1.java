@@ -25,7 +25,7 @@ class Pessoa {
     }
 }
 
-public class ex9 {
+public class ex9_uni1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Pessoa> listaPessoas = new ArrayList<>();
