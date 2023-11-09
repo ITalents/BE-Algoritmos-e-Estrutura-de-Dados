@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import Projeto.Pizza.TamanhoPizza;
+
 public class Pizzaria {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Cliente> listaClientes = new ArrayList<>();
+        List<Pedido> listaPedidos = new ArrayList<>();
 
         boolean continuar = true;
         while (continuar) {
@@ -27,7 +30,7 @@ public class Pizzaria {
 
             switch (opcao) {
                 case 1:
-                    fazerPedido(scanner);
+                    fazerPedido(scanner, listaPedidos, listaClientes);
                     break;
                 case 2:
                     alterarPedido();
@@ -54,8 +57,84 @@ public class Pizzaria {
     
     }
 
-    private static void fazerPedido(Scanner scanner) {
-        System.out.println("Fazer pedido");
+    private static void fazerPedido(Scanner scanner, List<Pedido> listaPedidos, List<Cliente> listaClientes) {
+        List<Pizza> pizzas = new ArrayList<>();
+        System.out.println("FAZER PEDIDO");
+
+        int x = 1;
+        System.out.println("Selecione um cliente: ");
+        for (Cliente cliente : listaClientes) {
+            System.out.println(x+" - "+cliente.getNome());
+            x++;
+        }
+        System.out.print("Opção: ");
+        int cliente = scanner.nextInt();
+        scanner.nextLine();
+
+        boolean continuar = true;
+        while (continuar) {
+            x = 1;
+            System.out.println("Qual o tamanho da pizza? ");
+            System.out.println("Selecione um tamanho: ");
+            for (TamanhoPizza tamanhos : Pizza.TamanhoPizza.values()) {
+                System.out.println(x+" - "+tamanhos);
+                x++;
+            }
+            System.out.print("Opção: ");
+            int tamanho = scanner.nextInt();
+            scanner.nextLine();
+
+            int quantiSabores = 0;
+            while (quantiSabores < 1 || quantiSabores > 4) {
+                System.out.println("Digite a quantidade de sabores: 1 - 4 ");
+                System.out.print("Opção: ");
+                quantiSabores = scanner.nextInt();
+                scanner.nextLine();
+            }
+
+            Cardapio cardapio = new Cardapio();
+            List<String> saboresList = new ArrayList<>();
+            List<String> saboresSelect = new ArrayList<>();
+
+            for (int i = 0; i < quantiSabores; i++) {
+                System.out.println("Selecione um sabor: ");
+
+                x = 1;
+                for (String sabor : cardapio.getCardapio().keySet()) {
+                    saboresList.add(sabor);
+                    System.out.println(x+" - "+sabor);
+                    x++;
+                }
+                System.out.print("Opção: ");
+                int opcao = scanner.nextInt();
+                scanner.nextLine();
+                saboresSelect.add(saboresList.get(opcao-1));
+            }
+
+            Pizza pizza = new Pizza(saboresSelect, cardapio.getPrecoJusto(saboresSelect), TamanhoPizza.getByIndex(tamanho-1));
+            pizzas.add(pizza);
+
+            System.out.println("Pizza cadastrada com sucesso!");
+            System.out.println();
+            System.out.println("Deseja cadastrar mais uma pizza no pedido?");
+            System.out.print("1 - Sim, 2 - Não: ");
+            int opcao = scanner.nextInt();
+            scanner.nextLine();
+
+            if(opcao != 1){
+                continuar = false;
+            }
+        }
+        Pedido pedido = new Pedido(listaPedidos.size()+1,listaClientes.get(cliente-1), pizzas, somarPizzas(pizzas));
+        listaPedidos.add(pedido);
+    }
+
+    private static double somarPizzas(List<Pizza> pizzas) {
+        double valorTotal = 0;
+        for (Pizza pizza : pizzas) {
+            valorTotal += pizza.getPreco();
+        }
+        return valorTotal;
     }
 
     private static void alterarPedido() {
